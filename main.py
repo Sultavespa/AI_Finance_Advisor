@@ -16,10 +16,9 @@ def chat_with_gpt3(prompt):
         'max_tokens': 100,
     }
     response = requests.post(api_url, headers=headers, json=data)
-    #response_json = response.json()
-    #return response_json['choices'][0]['text'].strip()
     response_json = response.json()
-    print(response_json)
+    return response_json['choices'][0]['text'].strip()
+    
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
