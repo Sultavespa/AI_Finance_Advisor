@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Finance Advisor</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f5;
+                margin: 0;
+                padding: 0;
+            }
+            #chat-container {
+                width: 60%;
+                margin: auto;
+                margin-top: 2em;
+                padding: 1em;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            }
+            #user_input, #submit {
+                width: 100%;
+                padding: 1em;
+                font-size: 1em;
+                margin-top: 2em;
+            }
+            #submit {
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            #submit:hover {
+                background-color: #0056b3;
+            }
+            .user-input {
+                margin: 1em 0;
+                padding: 1em;
+                border-radius: 5px;
+                background-color: #007BFF;
+                color: white;
+                width: 70%;
+            }
+            .bot-response {
+                margin: 1em 0;
+                padding: 1em;
+                border-radius: 5px;
+                background-color: #eee;
+                color: black;
+                width: 70%;
+                margin-left: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="chat-container">
+            {% if user_input %}
+                <div class="user-input">{{ user_input }}</div>
+                <div class="bot-response">{{ bot_response }}</div>
+            {% endif %}
+            <form action="/" method="post">
+                <input type="text" name="user_input" id="user_input" placeholder="Type a message...">
+                <input type="submit" value="Send" id="submit">
+            </form>
+        </div>
+    </body>
+</html>
