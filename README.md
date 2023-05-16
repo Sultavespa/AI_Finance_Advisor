@@ -6,7 +6,7 @@ This repository contains the code for a finance-specific chatbot built using Pyt
 
 The chatbot is a web application that users can interact with in a conversational manner. The purpose of the bot is to provide finance-specific responses to user queries, leveraging the capabilities of OpenAI's GPT-3.5 model.
 
-##Possible issues
+## Possible issues
 If you are redirected to a debug page when running and the issue appears to be with 'choices' it will most likely be because you have run out of usage with your API Key.
 You can check your usage here : https://platform.openai.com/account/usage
 ## How to Run
